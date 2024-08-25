@@ -1,4 +1,4 @@
-package com.codebook.backend.model;
+package com.codebook.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -22,6 +22,6 @@ public class MyUser {
 
     private String password;
 
-    private String role;
+    private String roles;
 
 }

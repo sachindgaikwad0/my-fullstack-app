@@ -1,4 +1,4 @@
-package com.codebook.backend.service;
+package com.codebook.service;
 
 import java.util.Optional;
 
@@ -9,8 +9,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.codebook.backend.model.MyUser;
-import com.codebook.backend.repository.MyUserRepo;
+import com.codebook.model.MyUser;
+import com.codebook.repository.MyUserRepo;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
@@ -20,6 +20,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        System.out.println("username:"+username);
         MyUser myUser;
         Optional<MyUser> optionalUser = myUserRepo.findByEmail(username);
         if (optionalUser.isEmpty()) {

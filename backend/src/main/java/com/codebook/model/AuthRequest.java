@@ -1,9 +1,11 @@
-package com.codebook.backend.model;
+package com.codebook.model;
 
 import lombok.Data;
 
 @Data
 public class AuthRequest {
+
+    public AuthRequest(){}
 
     private String  username;
     private String  password;

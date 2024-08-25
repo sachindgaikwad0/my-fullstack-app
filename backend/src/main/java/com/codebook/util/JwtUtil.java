@@ -1,4 +1,4 @@
-package com.codebook.backend.util;
+package com.codebook.util;
 
 import java.security.Key;
 import java.util.Date;
