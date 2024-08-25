@@ -1,0 +1,50 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2984df;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e1e1e1;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 15px; /* Space between logo and title/buttons */
+  }
+  
+  .app-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    margin-right: 20px; /* Space between title and buttons */
+  }
+  
+  .menu-button,
+  .auth-button {
+    background: none;
+    border: 1px solid #070606;
+    color: #061c4d;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .menu-button:hover,
+  .auth-button:hover {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  
+  .header-right .auth-button:last-child {
+    margin-right: 0;
+  }
+  

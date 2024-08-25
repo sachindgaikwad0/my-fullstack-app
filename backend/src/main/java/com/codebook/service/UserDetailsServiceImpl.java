@@ -28,7 +28,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         } else {
             myUser = optionalUser.get();
         }
-        return User.builder().username(myUser.getEmail()).password(myUser.getPassword()).build();
+        return User.builder().username(myUser.getEmail()).password(myUser.getPassword()).roles(myUser.getRoles().split(",")).build();
     }
 
 }

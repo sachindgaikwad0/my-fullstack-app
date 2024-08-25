@@ -26,9 +26,12 @@ public class SecurityConfig {
 
         System.out.println("http::" + http);
         return http.csrf(AbstractHttpConfigurer::disable)
+        //.cors(cors->cors.disable())
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/authenticate")
+                        .requestMatchers("/authenticate","/register")
                         .permitAll()
+                        .requestMatchers("/admin").hasAnyRole("ADMIN")
+                        .requestMatchers("/user").hasAnyRole("USER")
                         .anyRequest()
                         .authenticated())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
